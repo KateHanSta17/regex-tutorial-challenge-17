@@ -63,7 +63,7 @@ Hex colour codes can be written with or without a leading ```#```. By making the
 - Does Not Match: ```##FFF```, ```FFF#```, ```# FFF``` (note the space)
 
 ## Grouping Constructs
-Grouping constructs use parentheses () to group multiple tokens together. This has two main purposes:
+Grouping constructs use parentheses ```()``` to group multiple tokens together. This has two main purposes:
 - Organisation: Groups multiple elements to apply quantifiers or alternations to the entire group.
 - Capturing: Captures the matched substring for later use (useful in more advanced regex applications).
 
@@ -77,7 +77,7 @@ This allows the alternation | to apply to both patterns within the group.
 Grouping ensures the regex engine treats the alternatives as a single unit, correctly applying the quantifiers and alternation.
 
 ## Alternation
-Alternation, represented by the pipe symbol |, acts like a logical OR. It allows the regex to match one pattern or another.
+Alternation, represented by the pipe symbol```|```, acts like a logical OR. It allows the regex to match one pattern or another.
 
 ### In Our Regex:
 ``` ([a-fA-F0-9]{6}|[a-fA-F0-9]{3}) ```
@@ -96,7 +96,7 @@ Hex colour codes can be either 3 or 6 digits long. The alternation allows the re
 - Does Not Match: ```#FFFFF``` (5 digits), ```#1234``` (4 digits)
 
 ## Bracket Expressions
-Bracket expressions (also known as character classes) [ ] match any one character within the brackets.
+Bracket expressions (also known as character classes) ```[ ]``` match any one character within the brackets.
 
 ### In Our Regex:
 ``` [a-fA-F0-9] ```
@@ -107,7 +107,7 @@ Matches any single character that is:
 - A digit between ```0``` and ```9```.
 
 #### Why This Matters:
-Hexadecimal digits include numbers 0-9 and letters A-F (both uppercase and lowercase). Bracket expressions allow us to match any valid hex digit.
+Hexadecimal digits include numbers ```0-9``` and letters ```A-F``` (both uppercase and lowercase). Bracket expressions allow us to match any valid hex digit.
 
 #### Examples:
 - Matches: ```A```, ```f```, ```3```, ```D```
