@@ -1,15 +1,15 @@
-# Understanding the Hexadecimal Color Code Regex
-In web design and development, hexadecimal color codes are a standard way to specify colors. They represent color values using hexadecimal notation, which combines red, green, and blue (RGB) color components. For example, ```#FFFFFF``` represents white, and ```#000000``` represents black.
+# Understanding the Hexadecimal Colour Code Regex
+In web design and development, hexadecimal color codes are a standard way to specify colours. They represent colour values using hexadecimal notation, which combines red, green, and blue (RGB) colour components. For example, ```#FFFFFF``` represents white, and ```#000000``` represents black.
 
-This tutorial breaks down a regular expression (regex) that validates hexadecimal color codes, helping you understand how each part contributes to matching valid hex color values.
+This tutorial breaks down a regular expression (regex) that validates hexadecimal colour codes, helping you understand how each part contributes to matching valid hex colour values.
 
 ### Summary
-The regex we'll explore is designed to match hexadecimal color codes used in CSS and HTML. It validates both 3-digit and 6-digit hex codes, with or without a leading ```#``` symbol.
+The regex we'll explore is designed to match hexadecimal colour codes used in CSS and HTML. It validates both 3-digit and 6-digit hex codes, with or without a leading ```#``` symbol.
 
 ``` regex
 /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/
 ```
-This regex might look complex at first glance, but we'll break it down step by step. By the end of this tutorial, you'll understand how each component works together to match hex color codes.
+This regex might look complex at first glance, but we'll break it down step by step. By the end of this tutorial, you'll understand how each component works together to match hex colour codes.
 
 ## Table of Contents
 - [Anchors](#anchors)
@@ -42,8 +42,8 @@ By using anchors, we ensure that the entire string is evaluated against the rege
 
 #### Examples:
 
-- Matches: #FFF, FFF, #FFFFFF, 123ABC
-- Does Not Match: Color: #FFF, #FFF is nice, G#FFF (because of extra characters before or after)
+- Matches: ```#FFF```, ```FFF```, ```#FFFFFF```, ```123ABC```
+- Does Not Match: Colour: ```#FFF```, ```#FFF is nice```, ```G#FFF``` (because of extra characters before or after)
 
 ## Optional Character
 The question mark ? makes the preceding character optional, meaning it can occur zero or one time.
@@ -55,16 +55,16 @@ The question mark ? makes the preceding character optional, meaning it can occur
 The # symbol is followed by ?, so the # is optional.
 
 #### Why This Matters:
-Hex color codes can be written with or without a leading #. By making the # optional, the regex can match both formats.
+Hex colour codes can be written with or without a leading ```#```. By making the # optional, the regex can match both formats.
 
 #### Examples:
 
-- Matches: #FFF, FFF, #FFFFFF, FFFFFF
-- Does Not Match: ##FFF, FFF#, # FFF (note the space)
+- Matches: ```#FFF```, ```FFF```, ```#FFFFFF```, ```FFFFFF```
+- Does Not Match: ```##FFF```, ```FFF#```, ```# FFF``` (note the space)
 
 ## Grouping Constructs
 Grouping constructs use parentheses () to group multiple tokens together. This has two main purposes:
-- Organization: Groups multiple elements to apply quantifiers or alternations to the entire group.
+- Organisation: Groups multiple elements to apply quantifiers or alternations to the entire group.
 - Capturing: Captures the matched substring for later use (useful in more advanced regex applications).
 
 ### In Our Regex:
@@ -88,12 +88,12 @@ The | separates two patterns:
 
 #### Why This Matters:
 
-Hex color codes can be either 3 or 6 digits long. The alternation allows the regex to match both possibilities.
+Hex colour codes can be either 3 or 6 digits long. The alternation allows the regex to match both possibilities.
 
 #### Examples:
 
-- Matches: #FFFFFF, #FFF, 123ABC, 789
-- Does Not Match: #FFFFF (5 digits), #1234 (4 digits)
+- Matches: ```#FFFFFF```, ```#FFF```, ```123ABC```, ```789```
+- Does Not Match: ```#FFFFF``` (5 digits), ```#1234``` (4 digits)
 
 ## Bracket Expressions
 Bracket expressions (also known as character classes) [ ] match any one character within the brackets.
@@ -102,16 +102,16 @@ Bracket expressions (also known as character classes) [ ] match any one characte
 ``` [a-fA-F0-9] ```
 
 Matches any single character that is:
-- A lowercase letter between a and f.
-- An uppercase letter between A and F.
-- A digit between 0 and 9.
+- A lowercase letter between ```a``` and ```f```.
+- An uppercase letter between ```A``` and ```F```.
+- A digit between ```0``` and ```9```.
 
 #### Why This Matters:
 Hexadecimal digits include numbers 0-9 and letters A-F (both uppercase and lowercase). Bracket expressions allow us to match any valid hex digit.
 
 #### Examples:
-- Matches: A, f, 3, D
-- Does Not Match: G, z, !, @
+- Matches: ```A```, ```f```, ```3```, ```D```
+- Does Not Match: ```G```, ```z```, ```!```, ```@```
 
 ## Quantifiers
 Quantifiers specify how many times the preceding element should occur.
@@ -126,12 +126,12 @@ Quantifiers specify how many times the preceding element should occur.
 
 ### Why This Matters:
 
-This ensures that only valid hex color code lengths are matched.
+This ensures that only valid hex colour code lengths are matched.
 
 ### Examples:
 
-- Matches: FFFFFF, 123ABC (6 digits); FFF, ABC (3 digits)
-- Does Not Match: FFFFF (5 digits), 1234 (4 digits), 1234567 (7 digits)
+- Matches: ```FFFFFF```, ```123ABC``` (6 digits); ```FFF```, ```ABC``` (3 digits)
+- Does Not Match: ```FFFFF``` (5 digits), ```1234``` (4 digits), ```1234567``` (7 digits)
 
 ## Character Classes
 Character classes define a set of characters that a single character can match. We've already used them in our bracket expressions.
@@ -149,15 +149,15 @@ Flags are optional parameters that modify the behavior of the regex. They are pl
 
 ### Common Flags:
 
-- i: Case-insensitive matching.
-- g: Global search (find all matches).
-- m: Multiline matching.
+- ```i```: Case-insensitive matching.
+- ```g```: Global search (find all matches).
+- ```m```: Multiline matching.
 
 ### In Our Regex:
 Our regex doesn't use any flags. We handle case sensitivity by including both uppercase and lowercase letters in our character class.
 
 ### Alternative Approach:
-If we wanted to simplify the character class, we could use the i flag to make the regex case-insensitive:
+If we wanted to simplify the character class, we could use the ```i``` flag to make the regex case-insensitive:
 
 ``` /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i ```
 
@@ -170,22 +170,23 @@ Character escapes allow you to match characters that have special meaning in reg
 
 ### In Our Regex:
 We don't need to escape any characters because:
-- The # symbol doesn't have a special meaning in regex.
+- The ```#``` symbol doesn't have a special meaning in regex.
 - All other characters are either literals or part of regex syntax.
 
 __Note:__
 
-_If we needed to match a special character like a period ., we would escape it with a backslash_: ```\.```
+_If we needed to match a special character like a period ```.```, we would escape it with a backslash_: ```\.```
 
 ## Author
-Kate Hannah is a web development student passionate about learning and teaching code concepts. You can find more of their work on [GitHub](https://github.com/KateHanSta17).
+Kate Hannah is a web development student passionate about learning code concepts. You can find more of her work on [GitHub](https://github.com/KateHanSta17).
 
 ## Additional Notes for Beginners:
 
 - ### Practice Makes Perfect: 
-  - Experiment with the regex using tools like RegExr or Regex101 to see how it matches different strings.
+  - Experiment with the regex using tools like [RegExr](https://regexr.com/) or [Regex101](https://regex101.com/) to see how it matches different strings.
 - ### Don't Be Intimidated: 
   - Regex can seem complex, but breaking it down into smaller parts makes it manageable.
+  
 ### Resources: 
 Check out online tutorials and documentation to deepen your understanding.
   - [How to Validate Hexadecimal Colour Code using Regular Expression](https://www.geeksforgeeks.org/how-to-validate-hexadecimal-color-code-using-regular-expression/)
