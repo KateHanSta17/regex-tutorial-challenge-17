@@ -1,5 +1,14 @@
 # 17 Computer Science for JavaScript: Regex Tutorial
 
+## Github Repo
+[Katehansta17: Regex Tutorial, Challenge 17](https://github.com/KateHanSta17/regex-tutorial-challenge-17)
+## Gist URL
+[Understanding the Hexadecimal Colour Code Regex](https://gist.github.com/KateHanSta17/e1c17bc1b8430f41ffe3bf513e6ada22)
+
+### Deployed Gist Example
+![Gist Screenshot](./assets/images/gist%20screenshot.jpg)
+
+
 ## Your Task
 
 Developers write code, but they also *write about code*. Take a moment to search the web for tutorials about any of the subjects you’ve learned so far in this course. You’re likely to find thousands of tutorials written by developers of all skill levels, including junior developers&mdash;like yourself!
