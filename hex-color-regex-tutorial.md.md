@@ -22,7 +22,7 @@ This regex might look complex at first glance, but we'll break it down step by s
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 - [Author](#author)
-- [Regex Components]()
+- [Additional Notes for Beginners & Resources](#additional-notes-for-beginners)
 
 ## Anchors
 Anchors are special characters in regex that assert the position of the pattern within the text. They don't match any characters themselves but specify where the match should occur.
@@ -181,12 +181,17 @@ _If we needed to match a special character like a period ```.```, we would escap
 Kate Hannah is a web development student passionate about learning code concepts. You can find more of her work on [GitHub](https://github.com/KateHanSta17).
 
 ## Additional Notes for Beginners:
+#### Practice Makes Perfect: 
+  Experiment with the regex using tools like the below, to see how it matches different strings:
+  - [RegExr](https://regexr.com/) (_a useful tool that helps with regex debugging and understanding through interactive explanations._) OR;
+  - [Regex101](https://regex101.com/) (_allows developers to test regex patterns against sample text and get a breakdown of each part of the regex_)
+  - [RegExOne](https://regexone.com/) (_RegexOne
+Learn Regular Expressions with simple, interactive exercises._)
 
-- ### Practice Makes Perfect: 
-  - Experiment with the regex using tools like [RegExr](https://regexr.com/) or [Regex101](https://regex101.com/) to see how it matches different strings.
-- ### Don't Be Intimidated: 
-  - Regex can seem complex, but breaking it down into smaller parts makes it manageable.
-  
+### Comparison with Other Color Systems:
+#### RGB: 
+Instead of using hexadecimal, colors can also be specified using RGB (rgb(255,255,255)). It's worth mentioning that while RGB is more intuitive (directly specifying red, green, and blue values), __hex codes are preferred for compactness__.
+
 ### Resources: 
 Check out online tutorials and documentation to deepen your understanding.
   - [How to Validate Hexadecimal Colour Code using Regular Expression](https://www.geeksforgeeks.org/how-to-validate-hexadecimal-color-code-using-regular-expression/)
